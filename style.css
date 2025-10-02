@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+}
+
+#home,
+#projects,
+#about,
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-wrap: wrap;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFE6A7;
+    color: #432818;
+    text-shadow: rgba(56, 17, 0, 0.274) 2px 1px 2px;
+}
+
+#home {
+    background: linear-gradient(to bottom, #432818, #6F1D1B, #b56932);
+    font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #FFE6A7;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('./project-section-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+nav {
+    background-color: #432818;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+.logo:hover img {
+    transform: scale(1.20);
+    cursor: pointer;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 1rem;
+}
+
+.navbar a {
+    color: #FFE6A7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b79050;
+}
+
+section h2 {
+    color: #6F1D1B;
+    border-bottom: 2px solid #99582A;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+a {
+    color: #99582A;
+}
+
+a:hover {
+    color: #BB9457;
+}
+
+button {
+    background-color: #BB9457;
+    color: #432818;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #99582A;
+}
+
+/* Footer (optional) */
+footer {
+    background-color: #6F1D1B;
+    color: #FFE6A7;
+    text-align: center;
+    padding: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-card {
+    background-color: #FFF1D6;
+    border: 2px solid #99582A;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 2px 2px 8px rgba(67, 40, 24, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 12px rgba(67, 40, 24, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: #6F1D1B;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #432818;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
