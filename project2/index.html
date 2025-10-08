@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dual Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Carousel Gallery Section -->
+    <section class="carousel-section">
+        <h2>The Carousel Gallery</h2>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carousel">
+                <img src="./gallery 1/andre-ympSFC_rtOc-unsplash.jpg" alt="Slide 1">
+                <img src="./gallery 1/andrew-ruiz-ab5jn3Ikj8M-unsplash.jpg" alt="Slide 2">
+                <img src="./gallery 1/brandon-hoogenboom-yc8WcP5sj60-unsplash.jpg" alt="Slide 3">
+                <img src="./gallery 1/cesar-cid-Uw2hMJSyAyU-unsplash.jpg" alt="Slide 4">
+                <img src="./gallery 1/pexels-annamw-1047442.jpg" alt="Slide 5">
+                <img src="./gallery 1/pexels-benjaminfarren-21790487.jpg" alt="Slide 6">
+            </div>
+            <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+            <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+        </div>
+    </section>
+
+    <!-- Masonry Grid Gallery Section -->
+    <section class="grid-section">
+        <h2>The Grid Gallery</h2>
+        <div class="grid-container">
+            <img src="./gallery 2/premium_photo-1741194731888-cca7bbc05549.avif" alt="Grid 1">
+            <img src="./gallery 2/premium_photo-1741194731907-42741f4aff39.avif" alt="Grid 2">
+            <img src="./gallery 2/premium_photo-1741194732460-bb17c8e8e62f.avif" alt="Grid 3">
+            <img src="./gallery 2/premium_photo-1741194732504-702e600f1d89.avif" alt="Grid 4">
+            <img src="./gallery 2/premium_photo-1741194732590-95a096a10942.avif" alt="Grid 5">
+            <img src="./gallery 2/premium_photo-1741194732682-21f3046cf1a6.avif" alt="Grid 6">
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

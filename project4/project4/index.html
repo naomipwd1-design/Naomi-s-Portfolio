@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+  <div class="logo">
+    <img src="./Whimsy.png" alt="logo">
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#cart" id="cart-toggle">Cart (<span id="cart-count">0</span>)</a></li>
+  </ul>
+</nav>
+
+
+   
+  <header id="landing">
+    <div class="landing-content">
+      <h1>Welcome to Whimsy Girl!</h1>
+      <p>Discover timeless fashion pieces curated for elegance, comfort, and individuality. Explore our latest collection and find your perfect look.</p>
+      <a href="#products" class="shop-now-btn">Shop Now</a>
+    </div>
+  </header>
+
+
+<main>
+  <section id="products-section">
+    <h2 style="text-align:center; color:white; margin-bottom:20px;">Our Products</h2>
+    <div id="search-container">
+      <input type="text" id="search-box" placeholder="Search products by name...">
+    </div>
+
+    <div id="category-filter">
+      <button data-category="All">All</button>
+      <button data-category="Tops">Tops</button>
+      <button data-category="Bottoms">Bottoms</button>
+      <button data-category="Dresses">Dresses</button>
+      <button data-category="Accessories">Accessories</button>
+    </div>
+
+    <section id="products"></section>
+  </section>
+</main>
+
+
+ <div id="cart-modal" class="cart-modal">
+  <h3>Your Cart</h3>
+  <ul id="cart"></ul>
+  <button id="close-cart" style="float:right;">✖</button>
+</div>
+
+<div id="lightbox-overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

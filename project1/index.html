@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broken Calculator Starter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            background: rgb(189, 196, 207);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 242, 242, 0.2);
+        }
+
+        .display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            text-align: right;
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background: #ddd;
+        }
+
+
+        button:hover {
+            background: #ccc;
+        }
+
+        .delete {
+            background-color: #4b4b4ba8;
+            /* Green */
+            color: white;
+            font-weight: bold;
+        }
+
+        .equal {
+            background-color: #d9e8e4d3;
+            /* Green */
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="equal">/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="equal">*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="equal">-</button>
+            <button>0</button>
+            <button class="equal">.</button>
+            <button class="equal">=</button>
+            <button class="equal">+</button>
+            <button class="delete">DEL</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const buttons = document.querySelectorAll('button');
+        let currentInput = "";
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.textContent;
+                if (value === '=') {
+                    try {
+                        currentInput = eval(currentInput);
+                        display.value = currentInput;
+                    } catch (error) {
+                        display.value = "Error";
+                    }
+
+                } else if (value === 'DEL') {
+                    currentInput = "";
+                    display.value = "";
+                } else {
+                    currentInput += value;
+                    display.value = currentInput;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>🎯 Number Guessing Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+
+        <input type="number" id="guessInput" min="1" max="100" />
+        <button onclick="checkGuess()">Submit Guess!</button>
+
+        <p id="feedback"></p>
+        <p id="attempts"></p>
+
+        <div class="leaderboard-container">
+            <h2>🏆 Leaderboard</h2>
+            <ol id="leaderboard">
+                <li>HeadphonesOn — 5 attempts</li>
+                <li>SammiSweetheart — 7 attempts</li>
+                <li>junglejim4322@yahoo.com — 9 attempts</li>
+            </ol>
+        </div>
+
+        <button id="resetBtn" onclick="resetGame()">🔄 Play Again</button>
+
+    </div>
+
+
+
+
+    <script>
+        const targetNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        window.onload = function () {
+            const bestScore = localStorage.getItem("bestScore");
+            if (bestScore) {
+                document.getElementById("attempts").textContent = `Best Score: ${bestScore} attempts`;
+            }
+        };
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById("guessInput").value);
+            const feedback = document.getElementById("feedback");
+            const attemptsDisplay = document.getElementById("attempts");
+
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                feedback.textContent = "Please enter a valid number between 1 and 100.";
+                return;
+            }
+
+            attempts++;
+            attemptsDisplay.textContent = `Attempts: ${attempts}`;
+
+            if (userGuess === targetNumber) {
+                feedback.textContent = `🎉 Correct! The number was ${targetNumber}. You guessed it in ${attempts} tries.`;
+
+                const bestScore = localStorage.getItem("bestScore");
+                if (!bestScore || attempts < parseInt(bestScore)) {
+                    localStorage.setItem("bestScore", attempts);
+                    feedback.textContent += " 🏅 New personal best!";
+                } else {
+                    feedback.textContent += ` Your best score is ${bestScore} attempts.`;
+                }
+
+                document.getElementById("guessInput").disabled = true;
+                document.getElementById("resetBtn").style.display = "inline-block";
+            } else if (userGuess < targetNumber) {
+                feedback.textContent = "📉 Too low. Try again!";
+            } else {
+                feedback.textContent = "📈 Too high. Try again!";
+            }
+
+            document.getElementById("guessInput").value = "";
+            document.getElementById("guessInput").focus();
+        }
+
+        function resetGame() {
+            // Reset game state
+            attempts = 0;
+            targetNumber = Math.floor(Math.random() * 100) + 1;
+
+            // Reset UI
+            document.getElementById("feedback").textContent = "";
+            document.getElementById("attempts").textContent = "";
+            document.getElementById("guessInput").value = "";
+            document.getElementById("guessInput").disabled = false;
+            document.getElementById("guessInput").focus();
+            document.getElementById("resetBtn").style.display = "none";
+
+            // Hide leaderboard
+            document.querySelector(".leaderboard-container").style.display = "none";
+        }
+    </script>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

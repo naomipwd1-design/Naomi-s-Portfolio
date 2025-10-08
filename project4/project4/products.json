@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt",
+    "price": 19.99,
+    "description": "Red Nails Painted On.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/dovertankpolish_1296x.jpg?v=1757954246",
+    "category": "Tops"
+  },
+  {
+    "id": 2,
+    "name": "Skirt",
+    "price": 49.99,
+    "description": "Fairy Artist Skirt.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/updatedlilliaskirt_1296x.jpg?v=1752761949",
+    "category": "Bottoms"
+  },
+  {
+    "id": 3,
+    "name": "Bag",
+    "price": 89.99,
+    "description": "Red Tamato Hand Bag.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/Tomato-tote_1296x.png?v=1709924559",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Dress",
+    "price": 52.99,
+    "description": "Butterfly Dress.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/collectordressflat_1296x.jpg?v=1755112351",
+    "category": "Dresses"
+  },
+  {
+    "id": 5,
+    "name": "Pants",
+    "price": 31.99,
+    "description": "Flower On My Pants.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/izziepant_1296x.jpg?v=1741359278",
+    "category": "Bottoms"
+  },
+  {
+    "id": 6,
+    "name": "T-shirt",
+    "price": 15.99,
+    "description": "Red Heel.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/STELLATEESTILETTO_1296x.jpg?v=1747071127",
+    "category": "Tops"
+  },
+  {
+    "id": 7,
+    "name": "Skirt",
+    "price": 21.99,
+    "description": "Cheeta Girl Print.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/petra_mini_skirt_leopard_flat_1296x.jpg?v=1758204154",
+    "category": "Bottoms"
+  },
+  {
+    "id": 8,
+    "name": "Bag",
+    "price": 26.99,
+    "description": "Butterfly Bag.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/Untitled-2_1296x.png?v=1705682804",
+    "category": "Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Dress",
+    "price": 42.99,
+    "description": "Flytrap Dress.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/products/DoverDressinVenusFLT_1296x.png?v=1740673370",
+    "category": "Dresses"
+  },
+  {
+    "id": 10,
+    "name": "Pants",
+    "price": 23.99,
+    "description": "Darcy Girl Pants.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/darcypantflat_1296x.jpg?v=1757955699",
+    "category": "Bottoms"
+  },
+  {
+    "id": 11,
+    "name": "T-shirt",
+    "price": 18.99,
+    "description": "Cherries On My Top.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/MaraschinoCami_Resized_1296x.png?v=1750776991",
+    "category": "Tops"
+  },
+  {
+    "id": 12,
+    "name": "Skirt",
+    "price": 27.99,
+    "description": "Green and Cream Wave Skirt.",
+    "image": "https://www.tylermcgillivary.com/cdn/shop/files/TMxELLASKIRT_1296x.png?v=1744218297",
+    "category": "Bottoms"
+  }
+]
+

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #bf0225, #ff2c53, #ffa11d);
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ff383873;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: #ff99005b;
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.248);
+}
+
+.game-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.496);
+}
+
+.game-container p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000000;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.256);
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff004485;
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.107);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(340, 100%, 60%);
+}
+
+.leaderboard-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #ff003364;
+    border-radius: 12px;
+    background-color: #ffd9003f;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.259);
+}
+
+.leaderboard-container h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.256);
+
+}
+
+#leaderboard {
+    list-style: decimal inside;
+    padding-left: 0;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.256);
+}
+
+#leaderboard li {
+    margin: 8px 0;
+}
